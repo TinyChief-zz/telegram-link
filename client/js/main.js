@@ -2,7 +2,8 @@ const input = document.querySelector('.input-chat-id')
 const btnAccept = document.querySelector('.btn-accept')
 const btnChange = document.querySelector('.btn-change')
 const statusList = document.querySelectorAll('.chat-status li')
-const url = 'http://localhost:8810/chats'
+// const url = 'http://localhost:8810/chats'
+const url = 'https://telegram-links.herokuapp.com/chats'
 
 const statuses = [
   'Waiting for chat ID ...',
