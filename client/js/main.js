@@ -75,7 +75,7 @@ btnAccept.addEventListener('click', () => {
         statusList[1].classList.remove('passed')
         statusList[2].classList.remove('progress')
 
-        statusList.forEach((el, i1) => {
+        statusList.forEach((el, i) => {
           el.innerText = statuses[i]
         }) 
       }
