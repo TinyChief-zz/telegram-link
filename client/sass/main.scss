@@ -1,0 +1,131 @@
+@import "base";
+// @import "typography";
+// @import "utilities";
+// @import "animations";
+// @import "buttons";
+
+// @import "section";
+// @import "header";
+// @import "words";
+// @import "projects";
+// @import "articles";
+// @import "contact";
+// @import "footer";
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-Medium.ttf');
+  font-weight: 500;
+}
+
+body {
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  color: #393939;
+  box-sizing: content-box;
+  // * {
+  //   block
+  // }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.title {
+  display: inline-block;
+  h1 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  p {
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+
+section {
+  max-width: 600px;
+  margin: 0 auto; 
+}
+.box-title {
+  margin-bottom: 8px;
+}
+
+.chat-id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  input {
+    width: 350px;
+    line-height: 2;
+    font-size: 14px;
+    background: none;
+    border: 2px solid #5AA7D2;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 0px 10px;
+    &:disabled {
+      border: 2px solid #cccccc;
+    }
+  }
+
+  div {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    // display: flex;
+    // justify-content: space-around;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 7px 20px;
+    border: 2px solid;
+    border-radius: 10px;
+    &:nth-of-type(1) {
+      color: #5AA7D2;
+      margin-right: 20px;
+    }
+    &:nth-of-type(2) {
+      color: #63D53B;
+    }
+  }
+}
+
+.chat-status {
+  padding-left: 15px;
+  li {
+    margin-bottom: 5px;
+  }
+
+  .passed {
+    color: #63D53B;
+  }
+  .progress {
+    color: #5AA7D2;
+  }
+}
+
+.btn-disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: #ccc !important;
+}

@@ -1,0 +1,67 @@
+.contact {
+  background-image: linear-gradient(
+      105deg,
+      rgba(white, 0.9) 0%,
+      rgba(white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/message.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-dark);
+
+  @media only screen and (max-width: $bp-medium) {
+    background: linear-gradient(
+      to right bottom,
+      var(--color-primary-dark),
+      var(--color-primary-darkest)
+    );
+  }
+}
+
+.form {
+  padding: 4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-primary-dark)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 0.2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      color: #fff;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary-darkest);
+    letter-spacing: 1px;
+
+    @media only screen and (max-width: $bp-medium) {
+      color: #fff;
+      text-align: center;
+    }
+  }
+}

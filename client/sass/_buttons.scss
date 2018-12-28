@@ -1,0 +1,19 @@
+.btn-link {
+        &:link, &:visited {
+        text-decoration: none;
+        background-color: var(--color-primary);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 2rem 5rem;
+        border-radius: 5px;
+        transition: all .2s;
+        font-size: 2rem;
+        border: none;
+        letter-spacing: 2px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-primary-dark);        
+        }
+    }
+}
