@@ -44,7 +44,7 @@ app.post('/chats', (req, res, next) => {
         socket.emit('link', {link})
       }
     }
-    myEmitter.once(`newLink`, sendLink)
+    myEmitter.on(`newLink`, sendLink)
 
     socket.on('disconnectMe', (data) => {
       console.log('Someone wants to disconnect')
