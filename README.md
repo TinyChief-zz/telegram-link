@@ -9,5 +9,5 @@
 4. Give app permission to open a popup.
 4. See URL opened on browser.
 
-
-
+## TODO:
+1. Somehow wrap a client into chrome extension.
