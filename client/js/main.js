@@ -11,16 +11,33 @@ const statuses = [
   'Waiting for link ...'
 ]
 
+let chatID = localStorage.getItem('chatID')
+
+if (chatID) {
+  input.value = chatID
+  input.disabled = true
+  btnAccept.classList.add('btn-disabled')
+  statusList[0].classList.remove('progress')
+  statusList[0].classList.add('passed')
+  statusList[0].innerText += `\n ––> provided ID: ${input.value}`
+  handleSocket()
+}
 btnAccept.addEventListener('click', () => {
   statusList[0].classList.remove('progress')
   statusList[0].classList.add('passed')
   statusList[2].classList.add('progress')
   statusList[0].innerText += `\n ––> provided ID: ${input.value}`
 
+  localStorage.setItem('chatID', input.value)
+
   input.disabled = true
   btnAccept.classList.add('btn-disabled')
 
   // Say to server that ID is provided
+  handleSocket()
+})
+
+function handleSocket () {
   fetch(url, {
     method: 'POST',
     headers: {
@@ -77,11 +94,11 @@ btnAccept.addEventListener('click', () => {
 
         statusList.forEach((el, i) => {
           el.innerText = statuses[i]
-        }) 
+        })
       }
       btnChange.addEventListener('click', handleChange)
     })
     .catch(err => {
       console.log(err)
     })
-})
+}
